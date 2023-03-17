@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "owmtelegrambot"
+version = "0.1.0"
+description = "Telegram bot script that provides users with weather information and clothing suggestions based on the current weather and forecast for a specified city and country code."
+authors = ["The-WildWolf <ksenna.sitek@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openweathermapwrapper = {git = "https://github.com/The-WildWolf/OpenWeatherMapWrapper.git", rev = "0.2.1"}
+aiogram = "^2.25.1"
+
+[tool.poetry.group.dev.dependencies]
+commitizen = "^2.42.1"
+pre-commit = "^3.1.1"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version_files = [
+    "pyproject.toml:^version",
+]
+update_changelog_on_bump = true
+version = "0.1.0"
+
+
+[tool.commitizen_changelog]
+tag_format = "v$version"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
