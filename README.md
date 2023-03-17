@@ -50,6 +50,7 @@ poetry install
 
 ```bash
 export TELEGRAM_API_TOKEN="your_telegram_api_token_here"
+export OPENWEATHERMAP_API_KEY="your_openweathermap_api_key_here"
 ```
 
 5. Run the bot:
