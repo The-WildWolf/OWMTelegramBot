@@ -9,6 +9,30 @@ Stack: Aiogram, Telegram, OpenWeatherMap API.
 * Receive clothing suggestions based on the current weather and forecasted weather conditions
 
 ## Installation
+
+### Using Docker
+
+1. Install [Docker](https://docs.docker.com/engine/install/).
+
+2. Clone the repository:
+
+```bash
+git clone https://github.com/The-WildWolf/OWMTelegramBot.git
+cd OWMTelegramBot
+```
+
+3. Build the Docker image:
+
+```bash
+docker build -t weather-bot .
+```
+
+4. Run the Docker container:
+```bash
+docker run -d -e OPENWEATHERMAP_API_KEY="your_openweathermap_api_key_here" -e TELEGRAM_API_TOKEN="your_telegram_api_token_here" --name weather-bot-instance weather-bot
+```
+
+### On your host system
 1. Clone the repository:
 
 ```bash
